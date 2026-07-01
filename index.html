@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Step Carpet Cleaning | Edwardsville, IL | $55/Room</title>
+<meta name="description" content="Professional carpet cleaning in Edwardsville, Collinsville, Alton, and St. Louis metro. $55/room. Same-day availability. Call 618-555-0123.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --primary: #2D5F4A;
+    --primary-dark: #1e4234;
+    --gold: #D4A853;
+    --dark: #2C2C2C;
+    --light: #f8f8f8;
+    --white: #ffffff;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+  .hero .tagline {
+    font-size: 1.2em;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .hero .price {
+    font-size: 2em;
+    font-weight: 800;
+    margin: 20px 0;
+  }
+  .hero .price span { color: var(--gold); }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin: 8px;
+    transition: all 0.2s;
+  }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--dark);
+  }
+  .btn-gold:hover { background: #c39a45; transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  .btn-outline:hover { background: white; color: var(--primary); }
+  .btn-dark {
+    background: var(--primary);
+    color: white;
+  }
+  .btn-dark:hover { background: var(--primary-dark); }
+
+  /* TRUST BAR */
+  .trust-bar {
+    background: var(--dark);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 0.95em;
+  }
+  .trust-bar span { display: flex; align-items: center; gap: 8px; }
+
+  /* SECTIONS */
+  section { padding: 60px 20px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--primary);
+  }
+  .section-sub {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  .service-card {
+    background: white;
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.2s;
+  }
+  .service-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+  .service-card .icon { font-size: 2.5em; margin-bottom: 15px; }
+  .service-card h3 { color: var(--primary); margin-bottom: 10px; }
+  .service-card .price-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  /* PRICING TABLE */
+  .pricing-section { background: var(--light); }
+  .pricing-table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .pricing-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 25px;
+    border-bottom: 1px solid #eee;
+  }
+  .pricing-row:last-child { border-bottom: none; }
+  .pricing-row.highlight {
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+  }
+  .pricing-row .service { font-weight: 600; }
+  .pricing-row .price { font-weight: 700; color: var(--primary); }
+  .pricing-row.highlight .price { color: var(--gold); }
+
+  /* BEFORE/AFTER */
+  .ba-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  .ba-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .ba-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 220px;
+  }
+  .ba-before, .ba-after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+  }
+  .ba-before { background: linear-gradient(135deg, #8B4513, #A0522D); }
+  .ba-after { background: linear-gradient(135deg, var(--primary), #4CAF50); }
+  .ba-caption {
+    padding: 15px;
+    background: white;
+    font-weight: 600;
+  }
+  .ba-caption small { color: #888; font-weight: 400; }
+
+  /* REVIEWS */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  .review {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--gold);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+  }
+  .stars { color: var(--gold); font-size: 1.2em; margin-bottom: 10px; }
+  .review-text { font-style: italic; margin-bottom: 15px; }
+  .review-author { font-weight: 700; color: var(--primary); }
+  .review-author small { color: #888; font-weight: 400; display: block; }
+
+  /* BOOKING FORM */
+  .booking-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+  }
+  .booking-section h2 { color: white; }
+  .booking-section .section-sub { color: rgba(255,255,255,0.85); }
+  .booking-form {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--dark);
+  }
+  .form-group { margin-bottom: 20px; }
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  .form-submit {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .form-submit:hover { background: var(--primary-dark); }
+
+  /* FAQ */
+  .faq-item {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    padding: 20px 25px;
+    border: 1px solid #e8e8e8;
+  }
+  .faq-item h4 { color: var(--primary); margin-bottom: 8px; }
+  .faq-item p { color: #555; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  footer h3 { color: var(--gold); margin-bottom: 15px; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer .areas {
+    margin: 20px 0;
+    color: #aaa;
+    font-size: 0.9em;
+  }
+  footer .copyright { margin-top: 20px; color: #666; font-size: 0.85em; }
+
+  /* STICKY CTA */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--gold);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -3px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+    display: none;
+  }
+  .sticky-cta a {
+    color: var(--dark);
+    font-weight: 800;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    .sticky-cta { display: block; }
+    body { padding-bottom: 60px; }
+    .hero h1 { font-size: 1.8em; }
+    .hero .price { font-size: 1.5em; }
+    h2 { font-size: 1.5em; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>🥾 Fresh Step Carpet Cleaning</h1>
+  <div class="tagline">Deep Clean You Can See. Fresh Step You Can Feel.</div>
+  <div class="price">Professional Steam Cleaning from <span>$55/room</span></div>
+  <p style="margin-bottom:25px;">Edwardsville • Collinsville • Alton • St. Louis Metro</p>
+  <a href="tel:6185550123" class="btn btn-gold">📞 Call Now: 618-555-0123</a>
+  <a href="#book" class="btn btn-outline">📅 Book Online</a>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span>⭐⭐⭐⭐⭐ 5-Star Rated</span>
+  <span>✅ Same-Day Availability</span>
+  <span>💰 No Hidden Fees</span>
+  <span>🛡️ Satisfaction Guaranteed</span>
+</div>
+
+<!-- SERVICES -->
+<section>
+  <div class="container">
+    <h2>Our Services</h2>
+    <p class="section-sub">Professional carpet cleaning for every situation</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">🏠</div>
+        <h3>Residential Cleaning</h3>
+        <p>Deep steam cleaning for your home. Removes dirt, allergens, and years of buildup. Your carpets will look brand new.</p>
+        <span class="price-tag">From $55/room</span>
+      </div>
+      <div class="service-card">
+        <div class="icon">🔑</div>
+        <h3>End-of-Tenancy</h3>
+        <p>Moving out? Get your full deposit back with our landlord-approved deep clean. Receipt provided for proof.</p>
+        <span class="price-tag">From $180</span>
+      </div>
+      <div class="service-card">
+        <div class="icon">🐕</div>
+        <h3>Pet Stain Removal</h3>
+        <p>Urine, vomit, mud — we've seen it all. Enzyme treatment kills odor at the source. Carpet safe for kids and pets.</p>
+        <span class="price-tag">From $80</span>
+      </div>
+      <div class="service-card">
+        <div class="icon">🧶</div>
+        <h3>Rug Cleaning</h3>
+        <p>We pick up, deep clean, and deliver your area rugs back to you. 2-3 day turnaround. Free pickup within 15 miles.</p>
+        <span class="price-tag">From $60</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section">
+  <div class="container">
+    <h2>Transparent Pricing</h2>
+    <p class="section-sub">No hidden fees. No surprises. What you see is what you pay.</p>
+    <div class="pricing-table">
+      <div class="pricing-row highlight">
+        <span class="service">Service</span>
+        <span class="price">Price</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">Standard Room (up to 200 sq ft)</span>
+        <span class="price">$55</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">Large Room (200-400 sq ft)</span>
+        <span class="price">$75</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">Hallway</span>
+        <span class="price">$40</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">Stairs (per flight)</span>
+        <span class="price">$45</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">2-Bedroom Package</span>
+        <span class="price">$140</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">3-Bedroom Package</span>
+        <span class="price">$200</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">End-of-Tenancy (2-bed)</span>
+        <span class="price">$180</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">End-of-Tenancy (3-bed)</span>
+        <span class="price">$240</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">End-of-Tenancy (4-bed)</span>
+        <span class="price">$300</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">Pet Stain Treatment (per room)</span>
+        <span class="price">+$25</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">Stain Protection (per room)</span>
+        <span class="price">+$30</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">Area Rug (5x7)</span>
+        <span class="price">$60</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">Area Rug (8x10)</span>
+        <span class="price">$90</span>
+      </div>
+      <div class="pricing-row">
+        <span class="service">Area Rug (9x12+)</span>
+        <span class="price">$120</span>
+      </div>
+      <div class="pricing-row highlight">
+        <span class="service">Minimum Job</span>
+        <span class="price">$80</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section>
+  <div class="container">
+    <h2>Before & After</h2>
+    <p class="section-sub">Real results from real jobs in the Edwardsville area</p>
+    <div class="ba-grid">
+      <div class="ba-item">
+        <div class="ba-images">
+          <div class="ba-before">BEFORE</div>
+          <div class="ba-after">AFTER</div>
+        </div>
+        <div class="ba-caption">Living Room — Collinsville<br><small>3 years of buildup removed in 2 hours</small></div>
+      </div>
+      <div class="ba-item">
+        <div class="ba-images">
+          <div class="ba-before">BEFORE</div>
+          <div class="ba-after">AFTER</div>
+        </div>
+        <div class="ba-caption">Pet Stain Removal — Edwardsville<br><small>Dog urine completely eliminated</small></div>
+      </div>
+      <div class="ba-item">
+        <div class="ba-images">
+          <div class="ba-before">BEFORE</div>
+          <div class="ba-after">AFTER</div>
+        </div>
+        <div class="ba-caption">End-of-Tenancy — Alton<br><small>Full deposit returned to tenant</small></div>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:30px; color:#888;">
+      <em>Replace these placeholders with your real before/after photos after first jobs</em>
+    </p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section style="background: var(--light);">
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <p class="section-sub">5-star reviews from your neighbors</p>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I can't believe it's the same carpet! Booked for my 3-bedroom before moving out. Got my full $1,200 deposit back!"</p>
+        <div class="review-author">Sarah M.<small>Edwardsville, IL — End-of-Tenancy</small></div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"We have two dogs and the carpet was embarrassing. After one session, it looks brand new. No more pet smell either!"</p>
+        <div class="review-author">Jennifer R.<small>Collinsville, IL — Pet Stain Removal</small></div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Professional, on time, fair price. The before/after photos speak for themselves. Will definitely use again."</p>
+        <div class="review-author">Mike T.<small>Glen Carbon, IL — Residential</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking-section" id="book">
+  <div class="container">
+    <h2>Book Your Clean</h2>
+    <p class="section-sub">Fill out the form below and we'll get back to you within 1 hour</p>
+    <form class="booking-form" action="mailto:freshstepcleaning@email.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label>👤 Your Name</label>
+        <input type="text" name="name" placeholder="John Smith" required>
+      </div>
+      <div class="form-group">
+        <label>📞 Phone Number</label>
+        <input type="tel" name="phone" placeholder="618-555-0000" required>
+      </div>
+      <div class="form-group">
+        <label>📧 Email (optional)</label>
+        <input type="email" name="email" placeholder="you@email.com">
+      </div>
+      <div class="form-group">
+        <label>📍 Address</label>
+        <input type="text" name="address" placeholder="123 Main St, Edwardsville" required>
+      </div>
+      <div class="form-group">
+        <label>🏠 Service Type</label>
+        <select name="service" required>
+          <option value="">Select a service...</option>
+          <option value="residential">Residential Cleaning</option>
+          <option value="end-of-tenancy">End-of-Tenancy</option>
+          <option value="pet-stain">Pet Stain Removal</option>
+          <option value="rug">Rug Cleaning (pickup/delivery)</option>
+          <option value="move-in">Move-In Cleaning</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>🛏️ Number of Rooms</label>
+        <select name="rooms" required>
+          <option value="">How many rooms?</option>
+          <option value="1">1 room</option>
+          <option value="2">2 rooms</option>
+          <option value="3">3 rooms</option>
+          <option value="4">4 rooms</option>
+          <option value="5+">5+ rooms</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>🐕 Pets?</label>
+        <select name="pets">
+          <option value="no">No pets</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="both">Both</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>📅 Preferred Date</label>
+        <input type="date" name="date">
+      </div>
+      <div class="form-group">
+        <label>💬 Anything else we should know?</label>
+        <textarea name="notes" rows="3" placeholder="Specific stains, access instructions, etc."></textarea>
+      </div>
+      <button type="submit" class="form-submit">🧼 Get My Free Quote</button>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <p class="section-sub">Everything you need to know</p>
+    <div class="faq-item">
+      <h4>How long does a typical job take?</h4>
+      <p>Most jobs take 1.5-3 hours depending on size. A 3-bedroom house is typically 3-4 hours including setup and drying time.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How long until my carpet is dry?</h4>
+      <p>Our commercial-grade equipment extracts 95% of moisture. Most carpets are dry in 2-4 hours, not 24+ hours like rental machines.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need to move furniture?</h4>
+      <p>Light furniture (chairs, small tables) we can move for you. Heavy items (couches, beds) please move before we arrive or we'll clean around them.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Are your chemicals safe for kids and pets?</h4>
+      <p>Yes. We use eco-friendly, non-toxic cleaning solutions that are safe for children, pets, and allergy sufferers.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What if I'm not satisfied?</h4>
+      <p>We offer a 100% satisfaction guarantee. If you're not happy, we'll come back and re-clean for free. If still not happy, you don't pay.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What's your minimum job?</h4>
+      <p>$80 minimum (covers 2 rooms or 1 room + hallway). This ensures we can deliver professional results without cutting corners.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do you offer discounts?</h4>
+      <p>Yes! 10% off for first-time customers, 15% off for 5+ rooms, and volume discounts for landlords/property managers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background: var(--primary); color: white; text-align: center;">
+  <div class="container">
+    <h2 style="color: white;">Ready for Fresh, Clean Carpets?</h2>
+    <p style="font-size: 1.2em; margin: 20px 0; color: rgba(255,255,255,0.9);">
+      Same-day availability • $55/room • Satisfaction guaranteed
+    </p>
+    <a href="tel:6185550123" class="btn btn-gold">📞 Call: 618-555-0123</a>
+    <a href="#book" class="btn btn-outline">📅 Book Online</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h3>🥾 Fresh Step Carpet Cleaning</h3>
+  <p>Deep Clean You Can See. Fresh Step You Can Feel.</p>
+  <p style="margin-top:15px;">📞 <a href="tel:6185550123">618-555-0123</a></p>
+  <p>📧 <a href="mailto:freshstepcleaning@email.com">freshstepcleaning@email.com</a></p>
+  <div class="areas">
+    <strong>Service Areas:</strong> Edwardsville • Collinsville • Glen Carbon • Alton • O'Fallon •
+    Granite City • Belleville • Fairview Heights • Troy • Bethalto • Maryville • East Alton •
+    St. Louis Metro (within 40 miles)
+  </div>
+  <div class="copyright">
+    © 2025 Fresh Step Carpet Cleaning. All rights reserved. | Edwardsville, IL
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="tel:6185550123">📞 CALL NOW: 618-555-0123</a>
+</div>
+
+<script>
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Form submission confirmation
+document.querySelector('.booking-form').addEventListener('submit', function(e) {
+  setTimeout(() => {
+    alert('Thank you! We\'ll get back to you within 1 hour with your free quote.');
+  }, 500);
+});
+</script>
+
+</body>
+</html>
