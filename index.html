@@ -133,6 +133,18 @@
     .hero h1 span { color: var(--gold); }
     .hero-intro { max-width: 39rem; margin-top: 1.25rem; color: rgba(255,255,255,.78); font-size: 1.08rem; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.7rem; }
+    .contact-direct {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: var(--paper);
+    }
+    .contact-direct strong { width: 100%; color: var(--forest); }
+    .contact-direct a { color: var(--forest); font-weight: 900; }
     .proof-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: .55rem; margin-top: 2rem; }
     .proof { border-top: 1px solid rgba(255,255,255,.22); padding-top: .85rem; }
     .proof strong { display: block; color: white; font-family: "Fraunces", serif; font-size: 1.35rem; }
@@ -285,8 +297,10 @@
     "description": "Local carpet and upholstery cleaning serving Edwardsville and the Metro East.",
     "url": "https://jmanhype.github.io/fresh-step-carpet-cleaning/",
     "image": "https://jmanhype.github.io/fresh-step-carpet-cleaning/assets/04-before-after.webp",
+    "telephone": "+1-618-512-2167",
     "priceRange": "$$",
-    "areaServed": ["Edwardsville", "Glen Carbon", "Collinsville", "Alton", "O'Fallon", "Metro East"]
+    "areaServed": ["Edwardsville", "Glen Carbon", "Collinsville", "Alton", "O'Fallon", "Metro East"],
+    "sameAs": ["https://www.facebook.com/profile.php?id=61591935628822"]
   }
   </script>
 </head>
@@ -301,7 +315,7 @@
         <a href="#services">Services</a>
         <a href="#results">Results</a>
         <a href="#pricing">Pricing</a>
-        <a class="button dark" href="#quote">Get a quote</a>
+        <a class="button dark" href="tel:+16185122167" aria-label="Call Fresh Step Carpet Cleaning at 618-512-2167">Call now</a>
       </nav>
     </div>
   </header>
@@ -314,8 +328,9 @@
           <h1>Dirty carpet.<br><span>Clean proof.</span></h1>
           <p class="hero-intro">Hot-water extraction for traffic lanes, everyday soil, pet spots and move-outs—backed by real job photos and straightforward pricing.</p>
           <div class="hero-actions">
-            <a class="button" href="#quote">Build my quote</a>
-            <a class="button alt" href="https://www.facebook.com/profile.php?id=61591935628822" target="_blank" rel="noopener">Message on Facebook</a>
+            <a class="button" href="tel:+16185122167">Call (618) 512-2167</a>
+            <a class="button alt" href="sms:+16185122167">Text for a quote</a>
+            <a class="button alt" href="#quote">Build my quote</a>
           </div>
           <div class="proof-row" aria-label="Key service facts">
             <div class="proof"><strong>$55</strong><span>standard room</span></div>
@@ -399,6 +414,12 @@
           <p class="eyebrow">Request a quote</p>
           <h2>Send a useful message the first time.</h2>
           <p style="margin-top:1rem;color:#5c6863">Fill this out and we will format your request. Copy it, then message the Fresh Step Facebook Page and attach room photos.</p>
+          <div class="contact-direct" aria-label="Direct phone contact">
+            <strong>Prefer to call or text?</strong>
+            <a href="tel:+16185122167">Call (618) 512-2167</a>
+            <span aria-hidden="true">•</span>
+            <a href="sms:+16185122167">Send a text</a>
+          </div>
           <div class="faq">
             <details><summary>What is the minimum?</summary><p>Three standard rooms, currently $165 inside the primary service area.</p></details>
             <details><summary>How long does drying take?</summary><p>Typical drying time is about 2–4 hours, depending on airflow, humidity, carpet density and the amount of water required.</p></details>
@@ -423,15 +444,15 @@
 
   <footer>
     <div class="wrap footer-grid">
-      <div><h3>Fresh Step Carpet Cleaning</h3><p style="margin-top:.7rem">Local carpet and upholstery cleaning for Edwardsville and the Metro East.</p></div>
-      <div class="footer-links"><a href="#services">Services</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="https://www.facebook.com/profile.php?id=61591935628822" target="_blank" rel="noopener">Facebook Page</a></div>
+      <div><h3>Fresh Step Carpet Cleaning</h3><p style="margin-top:.7rem">Local carpet and upholstery cleaning for Edwardsville and the Metro East.</p><p style="margin-top:.7rem"><a href="tel:+16185122167"><strong>(618) 512-2167</strong></a> · Call or text</p></div>
+      <div class="footer-links"><a href="#services">Services</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="tel:+16185122167">Call</a><a href="sms:+16185122167">Text</a><a href="https://www.facebook.com/profile.php?id=61591935628822" target="_blank" rel="noopener">Facebook Page</a></div>
     </div>
     <div class="wrap" style="margin-top:2rem;color:rgba(255,255,255,.45);font-size:.86rem">© 2026 Fresh Step Carpet Cleaning. Pricing and availability subject to job assessment.</div>
   </footer>
 
   <div class="mobile-cta" aria-label="Quick actions">
-    <a class="button" href="#quote">Get quote</a>
-    <a class="button alt" href="https://www.facebook.com/profile.php?id=61591935628822" target="_blank" rel="noopener">Facebook</a>
+    <a class="button" href="tel:+16185122167">Call now</a>
+    <a class="button alt" href="sms:+16185122167">Text us</a>
   </div>
 
   <script>
