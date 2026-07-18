@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fresh Step Carpet Cleaning | Digital Card</title>
+  <meta name="description" content="Call, text, save, or share Fresh Step Carpet Cleaning in Edwardsville and the Metro East.">
+  <meta name="theme-color" content="#153c31">
+  <meta property="og:title" content="Fresh Step Carpet Cleaning">
+  <meta property="og:description" content="Carpet and upholstery cleaning in Edwardsville and the Metro East. Call or text (618) 512-2167.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jmanhype.github.io/fresh-step-carpet-cleaning/card.html">
+  <meta property="og:image" content="https://jmanhype.github.io/fresh-step-carpet-cleaning/assets/digital-card-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://jmanhype.github.io/fresh-step-carpet-cleaning/card.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #13201c;
+      --forest: #153c31;
+      --forest-2: #205f4c;
+      --mint: #dff0e9;
+      --cream: #f7f2e8;
+      --paper: #fffdf7;
+      --gold: #d5a74f;
+      --line: rgba(19, 32, 28, .16);
+      --shadow: 0 1.5rem 4rem rgba(4, 18, 13, .25);
+    }
+    * { box-sizing: border-box; }
+    html { color-scheme: light; }
+    body {
+      min-height: 100svh;
+      margin: 0;
+      padding: 1rem;
+      display: grid;
+      place-items: center;
+      overflow-x: hidden;
+      color: var(--ink);
+      background: var(--forest);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.5;
+    }
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      pointer-events: none;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+    }
+    body::before { width: 25rem; height: 25rem; right: -15rem; top: -12rem; box-shadow: 0 0 0 4rem rgba(255,255,255,.025), 0 0 0 8rem rgba(255,255,255,.015); }
+    body::after { width: 18rem; height: 18rem; left: -13rem; bottom: -9rem; box-shadow: 0 0 0 4rem rgba(213,167,79,.035); }
+    a, button { font: inherit; }
+    .digital-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 34rem;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 1.6rem;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .identity { padding: 1.35rem; background: var(--forest); color: white; }
+    .brand-row { display: flex; align-items: center; gap: .75rem; }
+    .mark {
+      width: 3rem;
+      height: 3rem;
+      display: grid;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--forest);
+      font-weight: 900;
+    }
+    .brand-name { font-weight: 900; letter-spacing: -.02em; }
+    .service-area { color: #bfe0d1; font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 1.35rem 0 .75rem; font: 800 clamp(2.2rem, 11vw, 4rem)/.98 "Fraunces", serif; letter-spacing: -.045em; }
+    h1 span { color: var(--gold); }
+    .intro { max-width: 30rem; margin: 0; color: rgba(255,255,255,.75); }
+    .proof-photo { position: relative; margin: 0; background: var(--mint); }
+    .proof-photo img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: center 62%; }
+    .proof-badge { position: absolute; right: 1rem; bottom: 1rem; padding: .55rem .75rem; border-radius: 999px; background: var(--gold); color: var(--ink); font-size: .72rem; font-weight: 900; }
+    .content { padding: 1.25rem; }
+    .primary-actions, .utility-actions { display: grid; gap: .7rem; }
+    .primary-actions { grid-template-columns: 1fr 1fr; }
+    .utility-actions { grid-template-columns: 1fr; margin-top: .7rem; }
+    .action {
+      min-height: 3.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: .8rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--forest);
+      background: var(--paper);
+      font-weight: 900;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .action.primary { border-color: transparent; background: var(--gold); color: var(--ink); }
+    .action.dark { border-color: transparent; background: var(--forest); color: white; }
+    .action:focus-visible { outline: 3px solid rgba(213,167,79,.55); outline-offset: 2px; }
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; margin-top: 1rem; }
+    .fact { padding-top: .7rem; border-top: 1px solid var(--line); }
+    .fact strong { display: block; color: var(--forest); font: 800 1.2rem/1 "Fraunces", serif; }
+    .fact span { display: block; margin-top: .35rem; color: #68736e; font-size: .72rem; }
+    .services { margin-top: 1.2rem; padding: 1rem; border-radius: 1rem; background: var(--cream); }
+    .services h2 { margin: 0 0 .65rem; color: var(--forest); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; }
+    .services p { margin: 0; color: #4f5d57; font-size: .9rem; }
+    .share-status { min-height: 1.4rem; margin: .7rem 0 0; color: #5b6862; font-size: .82rem; text-align: center; }
+    .card-footer { padding: 1rem 1.25rem 1.25rem; border-top: 1px solid var(--line); text-align: center; }
+    .card-footer a { color: var(--forest); font-weight: 800; overflow-wrap: anywhere; }
+    @media (min-width: 640px) {
+      body { padding: 2rem; }
+      .identity, .content { padding: 1.7rem; }
+      .utility-actions { grid-template-columns: 1fr 1fr; }
+      .proof-photo img { aspect-ratio: 2/1; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fresh Step Carpet Cleaning",
+    "telephone": "+1-618-512-2167",
+    "url": "https://jmanhype.github.io/fresh-step-carpet-cleaning/",
+    "priceRange": "$$",
+    "areaServed": ["Edwardsville", "Glen Carbon", "Collinsville", "Alton", "O'Fallon", "Metro East"]
+  }
+  </script>
+</head>
+<body>
+  <main class="digital-card">
+    <section class="identity">
+      <div class="brand-row">
+        <span class="mark" aria-hidden="true">FS</span>
+        <div><div class="brand-name">Fresh Step Carpet Cleaning</div><div class="service-area">Edwardsville · Metro East</div></div>
+      </div>
+      <h1>Dirty carpet.<br><span>Clean proof.</span></h1>
+      <p class="intro">Carpet and upholstery cleaning with real job photos, straightforward pricing, and direct call-or-text booking.</p>
+    </section>
+
+    <figure class="proof-photo">
+      <img src="assets/04-before-after.webp" alt="Before-and-after carpet cleaning result" width="900" height="1200">
+      <figcaption class="proof-badge">REAL JOB RESULT</figcaption>
+    </figure>
+
+    <section class="content">
+      <div class="primary-actions" aria-label="Contact Fresh Step">
+        <a class="action primary" href="tel:+16185122167">Call now</a>
+        <a class="action dark" href="sms:+16185122167">Text us</a>
+      </div>
+      <div class="utility-actions">
+        <a class="action" href="contact.vcf" download>Save contact</a>
+        <a class="action" href="index.html#quote">Build a quote</a>
+        <a class="action" href="https://www.facebook.com/profile.php?id=61591935628822" target="_blank" rel="noopener">Facebook</a>
+        <button class="action" id="share-card" type="button">Share this card</button>
+      </div>
+
+      <div class="facts" aria-label="Service facts">
+        <div class="fact"><strong>$55</strong><span>standard room</span></div>
+        <div class="fact"><strong>3 rooms</strong><span>minimum visit</span></div>
+        <div class="fact"><strong>2–4 hrs</strong><span>typical dry time</span></div>
+      </div>
+
+      <div class="services">
+        <h2>Services</h2>
+        <p>Carpet · Upholstery · Pet spots · Traffic lanes · Move-in / move-out</p>
+      </div>
+      <p class="share-status" id="share-status" aria-live="polite"></p>
+    </section>
+
+    <footer class="card-footer">
+      <a href="index.html">Visit the full Fresh Step website</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('share-card').addEventListener('click', async function () {
+      var status = document.getElementById('share-status');
+      var data = {
+        title: 'Fresh Step Carpet Cleaning',
+        text: 'Call or text Fresh Step Carpet Cleaning at (618) 512-2167.',
+        url: window.location.href
+      };
+      try {
+        if (navigator.share) {
+          await navigator.share(data);
+          status.textContent = 'Card shared.';
+        } else if (navigator.clipboard) {
+          await navigator.clipboard.writeText(data.text + ' ' + data.url);
+          status.textContent = 'Card link copied.';
+        } else {
+          status.textContent = 'Copy this page link to share the card.';
+        }
+      } catch (error) {
+        if (error.name !== 'AbortError') status.textContent = 'Copy this page link to share the card.';
+      }
+    });
+  </script>
+</body>
+</html>
